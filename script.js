@@ -54,6 +54,18 @@ function setupGame() {
   scoreP.textContent = `Score: Human ${humanScore} - Computer ${computerScore}`;
 }
 
+function darkmode() {
+  body.classList.toggle("dark-mode");
+  if (body.classList.contains("dark-mode")) {
+    darkbtn.textContent = "Light mode";
+  } else {
+    darkbtn.textContent = "Dark mode";
+  }
+}
+
+const body = document.body;
+const darkbtn = document.querySelector("#dark");
+darkbtn.addEventListener("click", darkmode);
 setupGame();
 // 5 games code
 // function play(numPlay) {
